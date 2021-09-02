@@ -1,25 +1,30 @@
-import logo from './logo.svg';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 import './App.css';
+import MyNav from './components/MyNav'
+import MyFooter from './components/MyFooter'
+import MyJumbotron from './components/MyJumbotron';
+import SingleBook from './components/SingleBook';
+import BookList from './components/BookList';
+import horror from './data/horror.json';
+import CommentArea from '.components/CommentArea';
+
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  return ( <>
+    
+      
+    <MyNav/>
+
+    <MyFooter/>
+    <MyJumbotron/>
+    <SingleBook book = {horror[0]}/>
+    <BookList books={horror} />
+
+
+  
+  </> );
 }
 
 export default App;
